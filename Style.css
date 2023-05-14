@@ -78,6 +78,8 @@ body {
     display: flex;
     gap: .5em;
     justify-content: center;
+    margin-top: 150px;
+    
 }
 
 .container-segment {
