@@ -16,3 +16,37 @@ function flipAllCards(time){
  console.log (hours, minutes, seconds) 
 
 }
+
+flip(document.querySelector("[data-hours-tens]"), math.floor(hours/10))
+flip(document.querySelector("[data-hours-ones]"), hours/10)
+flip(document.querySelector("[data-minutes-tens]"), math.floor(minutes/10))
+flip(document.querySelector("[data-minutes-ones]"), minutes % 10)
+flip(document.querySelector("[data-seconds-tens]"), math.floor(seconds/10))
+flip(document.querySelector("[data-seconds-ones]"), seconds % 10)
+
+function flip(flipCard , newNumber){
+  const topHalf = flipCard.querySelector(".top")
+
+const startNumber = parseInt(topHalf.textContext)
+if(newNumber === StartNumber)
+return
+const  bottomHalf =flipCard.querySelector(".bottom")
+const topFlip =document.createElement("div")
+topFlip .classList.add("top-flip")
+const bottomFlip =document.createElement("div")
+bottomFlip.classList.add("botton=flip")
+
+
+top.textContext- startNumber
+bottomHalf.textContext = startNumber
+
+flipCard.dataset.currentNumber = startNumber
+flipCard.dataset.nextNumber = StartNumber - 1
+flipCard.addEventListner("animationend", e=>{
+    topHalf.textContext = startNumber -1;
+}) 
+flipCard.addEventListner("animationed",e=>{
+    bottomHalf.textContent = startNumber -1
+})
+flipCard.classList.add("flip")
+}
