@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     box-shadow: 0 2px 3px 0 rgba(0 , 0, 0 .2);
     border-radius: .1rem;
+    
 }
 
 .top,
@@ -26,6 +27,7 @@ body{
     line-height: 1;
     padding: .25rem;
     overflow: hidden;
+
 }
 
 .top,
@@ -35,6 +37,7 @@ body{
     border-top-right-radius: .1rem;
     border-top-left-radius: .1em;
     border-bottom: 1px solid rgba(0 , 0 , 0, 0.1);
+    
 }
 .bottom,
 .flip-card,
@@ -51,6 +54,17 @@ body{
     width : 100%;
     animation: flip-top 250ms ease-in;
     transform-origin:bottom ;
+}
+
+.flip-card.flip::before {
+    line-height:1 ;
+    padding-top: .25em;
+    position: absolute;
+    content: "5";
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    overflow:hidden;
 }
 
 @keyframes flip-top{
